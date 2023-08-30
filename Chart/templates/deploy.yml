@@ -1,0 +1,116 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-deployment-1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-1
+  template:
+    metadata:
+      labels:
+        app: flask-1
+    spec:
+      containers:
+        - name: flask-1
+          image: {{ .Values.flask1.image.repository }}:{{ .Values.flask1.image.tag }} 
+          ports:
+            - containerPort: 5000
+          env:
+            - name: USER_NAME
+              value: {{ .Values.user_name }}
+            - name: USER_PWD
+              value: {{ .Values.user_pwd }}
+            - name: DB_URL
+              value: {{ .Values.db_url }}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-deployment-2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-2
+  template:
+    metadata:
+      labels:
+        app: flask-2
+    spec:
+      containers:
+        - name: flask-2
+          image: {{ .Values.flask2.image.repository }}:{{ .Values.flask2.image.tag }}
+          ports:
+            - containerPort: 5000
+          env:
+            - name: USER_NAME
+              value: {{ .Values.user_name }}
+            - name: USER_PWD
+              value: {{ .Values.user_pwd }}
+            - name: DB_URL
+              value: {{ .Values.db_url }}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-deployment-3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-3
+  template:
+    metadata:
+      labels:
+        app: flask-3
+    spec:
+      containers:
+        - name: flask-3
+          image: {{ .Values.flask3.image.repository }}:{{ .Values.flask3.image.tag }}
+          ports:
+            - containerPort: 5000
+          env:
+            - name: USER_NAME
+              value: {{ .Values.user_name }}
+            - name: USER_PWD
+              value: {{ .Values.user_pwd }}
+            - name: DB_URL
+              value: {{ .Values.db_url }}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-httpd-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+        - name: httpd
+          image: httpd:2.4
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/local/apache2/htdocs
+      volumes:
+        - name: html-volume
+          configMap:
+            name: prod-html-configmap
+            items: 
+              - key: index.html
+                path: index.html
+
+
+
