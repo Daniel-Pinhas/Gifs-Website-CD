@@ -19,9 +19,15 @@ spec:
             - containerPort: 5000
           env:
             - name: USER_NAME
-              value: {{ .Values.user_name }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.user_name }}
+                  key: key1
             - name: USER_PWD
-              value: {{ .Values.user_pwd }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.user_pwd }}
+                  key: key2
             - name: DB_URL
               value: {{ .Values.db_url }}
 
@@ -47,9 +53,15 @@ spec:
             - containerPort: 5000
           env:
             - name: USER_NAME
-              value: {{ .Values.user_name }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.user_name }}
+                  key: key1
             - name: USER_PWD
-              value: {{ .Values.user_pwd }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.user_pwd }}
+                  key: key2
             - name: DB_URL
               value: {{ .Values.db_url }}
 
@@ -75,9 +87,15 @@ spec:
             - containerPort: 5000
           env:
             - name: USER_NAME
-              value: {{ .Values.user_name }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.user_name }}
+                  key: key1
             - name: USER_PWD
-              value: {{ .Values.user_pwd }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.user_pwd }}
+                  key: key2
             - name: DB_URL
               value: {{ .Values.db_url }}
 
