@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: Chart
   destination:
-    server: http://kubernetes.default.svc
+    server: http://kubernetes.default.svc:6443
     namespace: gifs-website
 
   syncPolicy:
