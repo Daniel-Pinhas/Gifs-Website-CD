@@ -7,8 +7,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
-    targetRevision: HEAD
     path: Chart
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: gifs-website
@@ -20,3 +23,4 @@ spec:
     automated:
       selfHeal: true
       prune: true
+ 
