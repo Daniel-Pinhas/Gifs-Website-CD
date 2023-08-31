@@ -1,11 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-app
+  name: gifs-website
   namespace: argocd
 spec: 
   project: default
-
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
     targetRevision: HEAD
@@ -21,4 +20,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
-      
