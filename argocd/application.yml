@@ -12,6 +12,9 @@ spec:
     helm:
       valueFiles:
         - values.yml
+        - service.yml
+        - deploy.yml
+        - config.yml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: gifs-website
