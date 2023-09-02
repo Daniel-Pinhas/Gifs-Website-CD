@@ -86,19 +86,19 @@ data:
         <section id="dogs">
             <h2>Dogs Gifs</h2>
             <p>Click the button below to explore Dogs Gifs:</p>
-            <button onclick="window.location.href='http://__FLASK_IP_PLACEHOLDER_1__:80'">Explore Dogs Gifs</button>
+            <button onclick="window.location.href='http://34.122.5.102:80'">Explore Dogs Gifs</button>
         </section>
 
         <section id="classmates">
             <h2>Classmates Gifs</h2>
             <p>Click the button below to explore Classmates Gifs:</p>
-            <button onclick="window.location.href='http://__FLASK_IP_PLACEHOLDER_2__:80'">Explore Classmates Gifs</button>
+            <button onclick="window.location.href='http://34.173.230.3:80'">Explore Classmates Gifs</button>
         </section>
 
         <section id="alpacas">
             <h2>Alpacas Gifs</h2>
             <p>Click the button below to explore Alpacas Gifs:</p>
-            <button onclick="window.location.href='http://__FLASK_IP_PLACEHOLDER_3__:80'">Explore Alpacas Gifs</button>
+            <button onclick="window.location.href='http://34.170.180.92:80'">Explore Alpacas Gifs</button>
         </section>
 
         <footer>
