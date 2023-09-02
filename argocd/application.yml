@@ -4,12 +4,20 @@ metadata:
   name: gifs-website
   namespace: argocd
 spec: 
+  destination:
+    namespace: gifs-website
+    name: kind
   project: default
   source:
+  - chart: gifs-website
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
+    targetRevision: 0.1.0
+    helm:
+      valueFiles:
+      - $values/Chart/values.yaml
+  - repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
     targetRevision: HEAD
-    path: Chart
-  destination:
+    ref: Chart    
     server: http://kubernetes.default.svc
     namespace: gifs-website
 
