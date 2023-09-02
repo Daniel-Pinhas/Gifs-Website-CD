@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: flask-ingress
+  namespace: gifs-website
   labels:
 spec:
   rules:
@@ -34,6 +35,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-service-1
+  namespace: gifs-website
 spec:
   selector:
     app: flask-1
@@ -48,6 +50,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-service-2
+  namespace: gifs-website
 spec:
   selector:
     app: flask-2
@@ -62,6 +65,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-service-3
+  namespace: gifs-website
 spec:
   selector:
     app: flask-3
@@ -76,6 +80,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: prod-httpd-service
+  namespace: gifs-website
 spec:
   selector:
     app: httpd
