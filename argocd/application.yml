@@ -10,14 +10,13 @@ spec:
     targetRevision: HEAD
     path: Chart
   destination:
-    server: "https://kubernetes.default.svc"
+    server: http://kubernetes.default.svc
     namespace: gifs-website
 
   syncPolicy:
     syncOptions:
-      - createNamespace=true
+    - CreateNamesspace=true
 
     automated:
       selfHeal: true
       prune: true
- 
