@@ -1,0 +1,18 @@
+
+user_name: rds-secrets
+user_pwd: rds-secrets
+
+db_url: rds-gifs-db.cih3afqd7fge.us-east-2.rds.amazonaws.com
+
+flask1:
+  image: 
+    repository: danielpinhas/flask-k8s
+    tag: 7.1
+flask2:
+  image: 
+    repository: danielpinhas/flask2-k8s
+    tag: 7.1
+flask3:
+  image:
+    repository: danielpinhas/flask3-k8s
+    tag: 7.1
