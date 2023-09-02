@@ -9,11 +9,12 @@ spec:
     namespace: gifs-website
     server: "https://kubernetes.default.svc"
   source:
-    helm:
-      valueFiles:
-        - values/Chart/values.yaml
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
     targetRevision: 0.1.0
+    path: Chart  # Path to the Helm chart directory
+    helm:
+      valueFiles:
+        - values.yaml  # Path to your values file within the Helm chart
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
