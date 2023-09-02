@@ -22,12 +22,12 @@ spec:
             - name: USER_NAME
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.user_name }}
+                  name: rds-secrets
                   key: key1
             - name: USER_PWD
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.user_pwd }}
+                  name: rds-secrets
                   key: key2
             - name: DB_URL
               value: {{ .Values.db_url }}
@@ -57,12 +57,12 @@ spec:
             - name: USER_NAME
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.user_name }}
+                  name: rds-secrets
                   key: key1
             - name: USER_PWD
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.user_pwd }}
+                  name: rds-secrets
                   key: key2
             - name: DB_URL
               value: {{ .Values.db_url }}
@@ -92,12 +92,12 @@ spec:
             - name: USER_NAME
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.user_name }}
+                  name: rds-secrets
                   key: key1
             - name: USER_PWD
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.user_pwd }}
+                  name: rds-secrets
                   key: key2
             - name: DB_URL
               value: {{ .Values.db_url }}

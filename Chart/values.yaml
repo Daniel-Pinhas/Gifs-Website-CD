@@ -1,7 +1,3 @@
-
-user_name: rds-secrets
-user_pwd: rds-secrets
-
 db_url: rds-gifs-db.cih3afqd7fge.us-east-2.rds.amazonaws.com
 
 flask1:
