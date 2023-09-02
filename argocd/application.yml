@@ -4,20 +4,20 @@ metadata:
   name: gifs-website
   namespace: argocd
 spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
   project: default
-  destination:
-    namespace: gifs-website
-    server: "https://kubernetes.default.svc"
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
-    targetRevision: 0.1.0
-    path: Chart  # Path to the Helm chart directory
+    path: Chart  # Specify the path to your Helm chart directory
+    targetRevision: main  # Replace with the appropriate branch or commit SHA
     helm:
       valueFiles:
         - values.yaml  # Path to your values file within the Helm chart
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-    automated:
-      selfHeal: false
-      prune: true
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: gifs-website
+
+
