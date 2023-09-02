@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
     targetRevision: HEAD
-    path: Chart
+    path: ../Chart
   destination:
     server: "https://kubernetes.default.svc"
     namespace: gifs-website
