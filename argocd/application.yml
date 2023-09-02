@@ -3,28 +3,20 @@ kind: Application
 metadata:
   name: gifs-website
   namespace: argocd
-spec: 
+spec:
+  project: default
   destination:
     namespace: gifs-website
-    name: kind
-  project: default
+    server: "https://kubernetes.default.svc"
   source:
-  - chart: gifs-website
-    repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
-    targetRevision: 0.1.0
     helm:
       valueFiles:
-      - $values/Chart/values.yaml
-  - repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
-    targetRevision: HEAD
-    ref: Chart    
-    server: http://kubernetes.default.svc
-    namespace: gifs-website
-
+        - values/Chart/values.yaml
+    repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
+    targetRevision: 0.1.0
   syncPolicy:
     syncOptions:
-    - CreateNamesspace=true
-
+      - CreateNamespace=true
     automated:
       selfHeal: true
       prune: true
