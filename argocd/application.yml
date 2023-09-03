@@ -6,9 +6,10 @@ metadata:
 spec:
   syncPolicy:
     automated:
-      enabled: false
       selfHeal: false
       prune: false
+    syncOptions:
+      - Validate=false
   project: default
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
