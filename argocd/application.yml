@@ -8,8 +8,8 @@ metadata:
 spec:
   syncPolicy:
     automated:
-      selfHeal: true
-      prune: true
+      selfHeal: false
+      prune: false
   project: default
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
