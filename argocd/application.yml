@@ -4,7 +4,7 @@ metadata:
   name: gifs-website
   namespace: argocd
   annotations:
-    app.enabled: false
+    app.enabled: "false"
 spec:
   syncPolicy:
     automated:
