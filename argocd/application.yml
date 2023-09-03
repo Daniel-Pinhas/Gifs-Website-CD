@@ -3,11 +3,10 @@ kind: Application
 metadata:
   name: gifs-website
   namespace: argocd
-  annotations:
-    app.enabled: "false"
 spec:
   syncPolicy:
     automated:
+      enabled: false
       selfHeal: false
       prune: false
   project: default
