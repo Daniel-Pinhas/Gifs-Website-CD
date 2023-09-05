@@ -1,14 +1,16 @@
+
+
 db_url: rds-gifs-db.cih3afqd7fge.us-east-2.rds.amazonaws.com
 
 flask1:
-  image: 
+  image:
     repository: danielpinhas/flask-k8s
-    tag: 7.1
+    tag: 7.5
 flask2:
-  image: 
+  image:
     repository: danielpinhas/flask2-k8s
-    tag: 7.1
+    tag: 7.5
 flask3:
   image:
     repository: danielpinhas/flask3-k8s
-    tag: 7.1
+    tag: 7.5
