@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: gifs-website-0.2.8
+appVersion: gifs-website-0.2.9
 description: A Helm Chart for deploying Flask applications
 name: gifs-website
 type: application
-version: 0.2.8
+version: 0.2.9
