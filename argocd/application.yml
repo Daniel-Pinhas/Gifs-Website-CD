@@ -13,11 +13,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Daniel-Pinhas/Gifs-Website-CD.git
-    path: Chart  # Specify the path to your Helm chart directory
-    targetRevision: main  # Replace with the appropriate branch or commit SHA
+    path: Chart  
+    targetRevision: main  
     helm:
       valueFiles:
-        - values.yaml  # Path to your values file within the Helm chart
+        - values.yaml  
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: gifs-website
