@@ -86,19 +86,19 @@ data:
         <section id="dogs">
             <h2>Dogs Gifs</h2>
             <p>Click the button below to explore Dogs Gifs:</p>
-            <button onclick="window.location.href='http://34.123.77.192:80'">Explore Dogs Gifs</button>
+            <button onclick="window.location.href='http://104.154.199.185:80'">Explore Dogs Gifs</button>
         </section>
 
         <section id="classmates">
             <h2>Classmates Gifs</h2>
             <p>Click the button below to explore Classmates Gifs:</p>
-            <button onclick="window.location.href='http://35.188.149.172:80'">Explore Classmates Gifs</button>
+            <button onclick="window.location.href='http://34.173.42.156:80'">Explore Classmates Gifs</button>
         </section>
 
         <section id="alpacas">
             <h2>Alpacas Gifs</h2>
             <p>Click the button below to explore Alpacas Gifs:</p>
-            <button onclick="window.location.href='http://34.122.92.121:80'">Explore Alpacas Gifs</button>
+            <button onclick="window.location.href='http://34.123.101.104:80'">Explore Alpacas Gifs</button>
         </section>
 
         <footer>
